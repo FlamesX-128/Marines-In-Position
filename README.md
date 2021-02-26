@@ -24,4 +24,5 @@ Does this work in Project brutality 3.0?  ‍ ‍ ‍ 》》》 ‍It is not tes
 ⠀⠀⠀⠀⠀<img src="https://user-images.githubusercontent.com/78381898/109349341-68b49200-783b-11eb-846a-07873b3ccf33.jpg" wight="200" height="200" />
 </div>
 
-# ⠀
+# WARNING:
+<h2>Brutal Doom and project brutality is NOT my video game, it is only an addon to improve the game experience.</h2> 
