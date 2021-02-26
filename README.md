@@ -25,4 +25,4 @@ Does this work in Project brutality 3.0?  ‍ ‍ ‍ 》》》 ‍It is not tes
 </div>
 
 # WARNING:
-<h2>Brutal Doom and project brutality is NOT my video game, it is only an addon to improve the game experience.</h2> 
+<h4>Brutal Doom and project brutality is NOT my video game, it is only an addon to improve the game experience.</h4> 
