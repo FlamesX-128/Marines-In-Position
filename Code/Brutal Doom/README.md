@@ -1,5 +1,5 @@
 # Marines-In-Position
-This is an addon for 》》》 Brutal Doom || Project Brutality 2.03 《《《 adding alerts to the marines <br>
+This is an addon for 》》》 Brutal Doom 《《《 adding alerts to the marines <br>
 
 # INFO
 
