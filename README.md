@@ -1,16 +1,18 @@
-# Marines-In-Position
+# Marines-In-Position:
 This is an addon for 》》》 Brutal Doom || Project Brutality 2.03 《《《 adding alerts to the marines <br>
 
-# INFO
+# Contents:
 Version 1.0:<br>
- -Adds alerts to soldiers when they are in "Holding Position".<br>
- -Only one soldier of each category can issue the alert. (except soldiers with BFG weapons and rocket launchers).<br>
+ ‍-Adds alerts to soldiers when they are in "Holding Position".<br>
+ ‍-Only one soldier of each category can issue the alert. (except soldiers with BFG weapons and rocket launchers).<br>
 
 Version 2.0:<br>
- -Keys to enable / disable the "type" of alert.<br>
- -Optimized code: less lag and much more efficient.<br>
- -Now all soldiers can issue an alert. (except soldiers with BFG weapons and rocket launchers).<br>
- -Available now for Project Brutality 2.03 .<br>
+ ‍-Keys to enable / disable the "type" of alert.<br>
+ ‍-Optimized code: less lag and much more efficient.<br>
+ ‍-Now all soldiers can issue an alert. (except soldiers with BFG weapons and rocket launchers).<br>
+ ‍-Available now for Project Brutality 2.03 .<br>
+
+# INFO:
 
 Does this work in Brutal Doom v21? ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍》》》 ‍Works with its respective version. <br>
 Does this work in Project brutality 2.3?  ‍ ‍ ‍ 》》》 ‍Works with its respective version. <br>
