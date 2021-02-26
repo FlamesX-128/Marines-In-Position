@@ -1,6 +1,14 @@
-/*================================================================================
-Script created by FlamesX-128
+# Marines-In-Position
+This is an addon for Project Brutality 2.03 adding alerts to the marines <br>
 
-If you are going to use my script for your mod, give me credits.
+# INFO
 
-================================================================================*/
+Does this work in Project brutality 2.3?  ‍ ‍ ‍ 》》》 ‍Works with its respective version. <br>
+Does this work in Project brutality 3.0?  ‍ ‍ ‍ 》》》 ‍It is not tested.
+#
+
+<div align="center">
+⠀⠀⠀⠀⠀<img src="https://user-images.githubusercontent.com/78381898/109349341-68b49200-783b-11eb-846a-07873b3ccf33.jpg" wight="200" height="200" />
+</div>
+
+# ⠀
