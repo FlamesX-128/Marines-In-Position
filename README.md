@@ -3,7 +3,7 @@ This is an addon for 》》》 Brutal Doom || Project Brutality 2.03 《《《 a
 
 # INFO
 
-Does this work in Brutal Doom v21?  ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ 》》》It works. <br>
+Does this work in Brutal Doom v21?  ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍》》》It works. <br>
 Does this work in Project brutality 2.3?  ‍ ‍ ‍ 》》》It works. <br>
 Does this work in Project brutality 3.0?  ‍ ‍ ‍ 》》》It is not tested.
 
