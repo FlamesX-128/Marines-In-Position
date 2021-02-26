@@ -1,6 +1,12 @@
 # Marines-In-Position
 <div align="center">
-This is an addon for >> Brutal Doom || Project Brutality 2.03 << adding alerts to the marines <br>
+This is an addon for 》》》 Brutal Doom || Project Brutality 2.03 《《《 adding alerts to the marines <br>
+</a>
+# INFO
+<div align="center">
+Does this work in Brutal Doom v21?        》》》 It works
+Does this work in Project brutality 2.3?  》》》 It works 
+Does this work in Project brutality 3.0?  》》》 It is not tested.
 </a>
 
 # ⠀
