@@ -1,0 +1,9 @@
+Actor RifleMarineAlert : Inventory { inventory.maxamount 1 }
+Actor ChaingunMarineAlert : Inventory { inventory.maxamount 1 }
+Actor ShotgunMarineAlert : Inventory { inventory.maxamount 1 }
+Actor PlasmaMarineAlert : Inventory { inventory.maxamount 1 }
+
+Actor Radiodelivered : Inventory { inventory.maxamount 1 }
+Actor RadioInMarine : Inventory { inventory.maxamount 1 }
+
+Actor AlertMarine : Inventory { inventory.maxamount 1 }

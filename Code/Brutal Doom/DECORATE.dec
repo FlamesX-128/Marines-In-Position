@@ -1,0 +1,28 @@
+#include "TOKENS.dec"
+#include "GUARDING.dec"
+#include "MOVING.dec"
+
+ACTOR ZTester {
+Game Doom
+Radius 16
+Height 56
+Monster
++NOPAIN
++NOBLOOD
++NOBLOODDECALS
++SHOOTABLE
++SOLID
+Health 10000
+Mass 2500
+Tag "Zombie"
+States
+	{
+	Spawn:
+		POSS A 1
+		Loop
+	
+	Death:
+		TNT1 A 0
+	Stop
+	}
+}

@@ -1,0 +1,190 @@
+ACTOR RMarineNew : Marine_Rifle replaces Marine_Rifle
+{
+States {
+	Missile:
+        //PLAY E 1
+		TNT1 A 0 A_ChangeFlag("NODROPOFF", 1)
+		TNT1 A 0 A_SpawnItem("KillMeSmall")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "CheckRangeToWait")
+		
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1925) == 0, "ContinueMissile")	
+		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "ContinueMissile")
+		TNT1 A 0 ACS_NamedExecuteAlways("RMarineCombat")
+	
+	ContinueMissile:
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckRetreat")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		TNT1 A 0 A_ChangeFlag("SOLID", 1)
+		
+		TNT1 A 0 A_JumpIfCloser(60, "AttackMelee")
+		TNT1 A 0 A_JumpIfCloser(300, "Retreat")
+		TNT1 A 0 A_PlaySound("MRNAT", 2)
+		
+		TNT1 A 0 A_Jump(128, "MissileLeft", "MissileRight")
+		
+		PLAY E 6 A_FaceTarget
+        TNT1 A 0 A_CustomMissile("MarineMuzzle1", 34)
+        TNT1 A 0 A_PlaySound("weapons/rifle")
+		PLAY F 3 BRIGHT 
+		TNT1 A 0 A_CustomMissile("MarineTracer", 40, 0, 0, 0)
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		
+		
+		
+		PLAY E 3 A_FaceTarget
+        TNT1 A 0 A_CustomMissile("MarineMuzzle1", 34)
+        TNT1 A 0 A_PlaySound("weapons/rifle")
+		PLAY F 3 BRIGHT
+		TNT1 A 0 A_CustomMissile("MarineTracer", 40, 0, 0, 0)
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		
+		
+
+		PLAY E 3 A_FaceTarget
+        TNT1 A 0 A_CustomMissile("MarineMuzzle1", 34)
+        TNT1 A 0 A_PlaySound("weapons/rifle")
+		PLAY F 3 BRIGHT
+		TNT1 A 0 A_CustomMissile("MarineTracer", 40, 0, 0, 0)
+		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
+		Goto See
+	}
+}
+
+ACTOR MMarineNew : Marine_Minigun replaces Marine_Minigun 
+{
+States {
+	Missile:
+        //PL42 E 1
+		TNT1 A 0 A_ChangeFlag("NODROPOFF", 1)
+		TNT1 A 0 A_SpawnItem("KillMeSmall")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "CheckRangeToWait")
+		
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1925) == 0, "ContinueMissile")	
+		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "ContinueMissile")
+		TNT1 A 0 ACS_NamedExecuteAlways("MMarineCombat")
+	
+	ContinueMissile:
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckRetreat")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		TNT1 A 0 A_ChangeFlag("SOLID", 1)
+		TNT1 A 0 A_JumpIfCloser(300, "Retreat")
+		TNT1 A 0 A_PlaySound("MRNAT", 2)
+	Goto Missile2
+	}
+}
+
+ACTOR SGMarineNew : Marine_Shotgun replaces Marine_Shotgun
+{
+States {
+	Missile:
+        //PLA3 E 1
+		TNT1 A 0 A_ChangeFlag("NODROPOFF", 1)
+		TNT1 A 0 A_SpawnItem("KillMeSmall")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "CheckRangeToWait")
+		
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1925) == 0, "ContinueMissile")	
+		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "ContinueMissile")
+		TNT1 A 0 ACS_NamedExecuteAlways("SGMarineCombat")
+	
+	ContinueMissile:
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckRetreat")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		TNT1 A 0 A_ChangeFlag("SOLID", 1)
+		TNT1 A 0 A_JumpIfCloser(300, "Retreat")
+		TNT1 A 0 A_PlaySound("MRNAT", 2)
+	Goto Missile2
+	}
+}
+
+ACTOR PGMarineNew : Marine_PlasmaGun replaces Marine_PlasmaGun
+{
+States {
+	Missile:
+        //PLA3 E 1
+		TNT1 A 0 A_ChangeFlag("NODROPOFF", 1)
+		TNT1 A 0 A_SpawnItem("KillMeSmall")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "CheckRangeToWait")
+		
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1925) == 0, "ContinueMissile")	
+		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "ContinueMissile")
+		TNT1 A 0 ACS_NamedExecuteAlways("PGMarineCombat")
+	
+	ContinueMissile:
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckRetreat")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		TNT1 A 0 A_ChangeFlag("SOLID", 1)
+		TNT1 A 0 A_JumpIfCloser(300, "Retreat")
+		TNT1 A 0 A_PlaySound("MRNAT", 2)
+	Goto Missile2
+	}
+}
+
+ACTOR ASGMarineNew : Marine_AutoShotgun replaces Marine_AutoShotgun
+{
+States {
+	Missile:
+        //PLA3 E 1
+		TNT1 A 0 A_ChangeFlag("NODROPOFF", 1)
+		TNT1 A 0 A_SpawnItem("KillMeSmall")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "CheckRangeToWait")
+		
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1925) == 0, "ContinueMissile")	
+		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "ContinueMissile")
+		TNT1 A 0 ACS_NamedExecuteAlways("ASGMarineCombat")
+	
+	ContinueMissile:
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckRetreat")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		TNT1 A 0 A_ChangeFlag("SOLID", 1)
+		TNT1 A 0 A_JumpIfCloser(300, "Retreat")
+		TNT1 A 0 A_PlaySound("MRNAT", 2)
+	Goto Missile2
+	}
+}
+
+ACTOR PCMarineNew : Marine_PulseCannon replaces Marine_PulseCannon
+{
+States {
+	Missile:
+        //PLA3 E 1
+		TNT1 A 0 A_ChangeFlag("NODROPOFF", 1)
+		TNT1 A 0 A_SpawnItem("KillMeSmall")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "CheckRangeToWait")
+		
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1925) == 0, "ContinueMissile")	
+		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "ContinueMissile")
+		TNT1 A 0 ACS_NamedExecuteAlways("PCMarineCombat")
+	
+	ContinueMissile:
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckRetreat")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		TNT1 A 0 A_ChangeFlag("SOLID", 1)
+		TNT1 A 0 A_JumpIfCloser(300, "Retreat")
+		TNT1 A 0 A_PlaySound("MRNAT", 2)
+	Goto Missile2
+	}
+}

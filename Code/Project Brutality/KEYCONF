@@ -1,0 +1,7 @@
+AddMenuKey "On/Off Dialogues [Guarding]" alertmarine
+Alias alertmarine "puke 1922"
+DefaultBind B alertmarine
+
+AddMenuKey "On/Off Dialogues [See]" alertmarine2
+Alias alertmarine2 "puke 1924"
+DefaultBind B alertmarine2

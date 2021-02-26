@@ -1,0 +1,71 @@
+#library "ALERT"
+#include "zcommon.acs"
+
+Script 1924 (void) NET CLIENTSIDE {
+	if (GetCVar("cd_alertmarine2") == 1) {
+	    ConsoleCommand("set cd_alertmarine2 0");
+		//ConsoleCommand("archivecvar cd_alert_moving");
+		Log(s:"\cc<TEAM> \cdMarine\ca: \cjMarine [See] disable Dialogues");
+		
+	} else if (GetCVar("cd_alertmarine2") == 0) {
+	    ConsoleCommand("set cd_alertmarine2 1");
+		//ConsoleCommand("archivecvar cd_alert_moving");
+		Log(s:"\cc<TEAM> \cdMarine\ca: \cjMarine [See] activated Dialogues");
+	} else {
+		Log(s:"\cc<TEAM> \cdMarine\ca: \cjERROR SYSTEM");
+		ConsoleCommand("set cd_alertmarine2 0");
+		//ConsoleCommand("archivecvar cd_alert_moving");
+	}	
+}
+
+Script 1925 (void) {
+    SetResultValue(GetCVar("cd_alertmarine2"));
+}
+
+Script "RMarineGCombat" (void) NET CLIENTSIDE {
+	Log(s:"\cc<TEAM> \cdMarine Guarding [Rifle]\ca: \cjEnemy near my position!");
+	PlaySound(0, "DSTINK", CHAN_BODY, 1.0, FALSE, 0);
+	GiveInventory("AlertMarine", 1);
+	delay(35*20);
+	TakeInventory("AlertMarine", 1);
+}
+
+Script "MMarineGCombat" (void) NET CLIENTSIDE {
+	Log(s:"\cc<TEAM> \cdMarine Guarding [Minigun]\ca: \cjEnemy near my position!");
+	PlaySound(0, "DSTINK", CHAN_BODY, 1.0, FALSE, 0);
+	GiveInventory("AlertMarine", 1);
+	delay(35*20);
+	TakeInventory("AlertMarine", 1);
+}
+
+Script "SGMarineGCombat" (void) NET CLIENTSIDE {
+	Log(s:"\cc<TEAM> \cdMarine Guarding [Shotgun]\ca: \cjEnemy near my position!");
+	PlaySound(0, "DSTINK", CHAN_BODY, 1.0, FALSE, 0);
+	GiveInventory("AlertMarine", 1);
+	delay(35*20);
+	TakeInventory("AlertMarine", 1);
+}
+
+Script "PGMarineGCombat" (void) NET CLIENTSIDE {
+	Log(s:"\cc<TEAM> \cdMarine Guarding [PlasmaGun]\ca: \cjEnemy near my position!");
+	PlaySound(0, "DSTINK", CHAN_BODY, 1.0, FALSE, 0);
+	GiveInventory("AlertMarine", 1);
+	delay(35*20);
+	TakeInventory("AlertMarine", 1);
+}
+
+Script "PCMarineGCombat" (void) NET CLIENTSIDE {
+	Log(s:"\cc<TEAM> \cdMarine Guarding [PulseCannon]\ca: \cjEnemy near my position!");
+	PlaySound(0, "DSTINK", CHAN_BODY, 1.0, FALSE, 0);
+	GiveInventory("AlertMarine", 1);
+	delay(35*20);
+	TakeInventory("AlertMarine", 1);
+}
+
+Script "ASGMarineGCombat" (void) NET CLIENTSIDE {
+	Log(s:"\cc<TEAM> \cdMarine Guarding [AutoShotgun]\ca: \cjEnemy near my position!");
+	PlaySound(0, "DSTINK", CHAN_BODY, 1.0, FALSE, 0);
+	GiveInventory("AlertMarine", 1);
+	delay(35*20);
+	TakeInventory("AlertMarine", 1);
+}
