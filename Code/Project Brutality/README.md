@@ -3,7 +3,7 @@ This is an addon for Project Brutality 2.03 adding alerts to the marines <br>
 
 # INFO
 
-Does this work in Project brutality 2.3?  ‍ ‍ ‍ 》》》 ‍Works with its respective version. <br>
+Does this work in Project brutality 2.3?  ‍ ‍ ‍ 》》》 ‍It works <br>
 Does this work in Project brutality 3.0?  ‍ ‍ ‍ 》》》 ‍It is not tested.
 #
 
