@@ -16,7 +16,6 @@ Version 2.0:<br>
 
 Version 3.0:<br>
 	- Keys to enable / disable the "type" of alert removed.<br>
-	
 	+ Random alert dialogs. <br>
 	+ Settings menu added.<br>
 		+ Custom alert time for each marine.<br>
