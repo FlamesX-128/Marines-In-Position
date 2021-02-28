@@ -16,7 +16,7 @@ Version 2.0:<br>
 
 Does this work in Brutal Doom v21? ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍》》》 ‍Works with its respective version. <br>
 Does this work in Project brutality 2.3?  ‍ ‍ ‍ 》》》 ‍Works with its respective version. <br>
-Does this work in Project brutality 3.0?  ‍ ‍ ‍ 》》》 ‍It is not tested.
+Does this work in Project brutality 3.0?  ‍ ‍ ‍ 》》》 ‍It works.
 #
 
 <div align="center">
