@@ -1,5 +1,3 @@
-Github: https://github.com/FlamesX-128
-
 # Marines-In-Position:
 This is an addon for 》》》 Brutal Doom || Project Brutality 2.03 《《《 adding alerts to the marines <br>
 
