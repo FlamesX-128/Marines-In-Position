@@ -15,11 +15,12 @@ Version 2.0:<br>
  ‍ ‍ ‍ ‍+Available now for Project Brutality 2.03 .<br>
 
 Version 3.0:<br>
-	- Keys to enable / disable the "type" of alert removed.<br>
-	+ Random alert dialogs. <br>
-	+ Settings menu added.<br>
-		+ Custom alert time for each marine.<br>
-		+ New movements.<br> 
+ ‍ ‍ ‍ ‍- Keys to enable / disable the "type" of alert removed.<br>
+ 
+ ‍ ‍ ‍ ‍+ Random alert dialogs. <br>
+ ‍ ‍ ‍ ‍+ Settings menu added.<br>
+ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍+ Custom alert time for each marine.<br>
+ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍+ New movements.<br> 
 
 # INFO [Version 3.0]:
 
