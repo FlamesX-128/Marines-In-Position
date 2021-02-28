@@ -1,0 +1,137 @@
+#library "MIPALERT"
+#include "zcommon.acs"
+
+Script 1920 (void) {
+    SetResultValue(GetCVar("MIP_RMarineA_Moving"));
+}
+
+Script 1921 (void) {
+    SetResultValue(GetCVar("MIP_RMarineA_Guarding"));
+}
+
+
+Script 1922 (void) {
+    SetResultValue(GetCVar("MIP_MMarineA_Moving"));
+}
+
+Script 1923 (void) {
+    SetResultValue(GetCVar("MIP_MMarineA_Guarding"));
+}
+
+
+Script 1924 (void) {
+    SetResultValue(GetCVar("MIP_SGMarineA_Moving"));
+}
+
+Script 1925 (void) {
+    SetResultValue(GetCVar("MIP_SGMarineA_Guarding"));
+}
+
+
+Script 1926 (void) {
+    SetResultValue(GetCVar("MIP_PGMarineA_Moving"));
+}
+
+Script 1927 (void) {
+    SetResultValue(GetCVar("MIP_PGMarineA_Guarding"));
+}
+
+
+Script 1928 (void) {
+    SetResultValue(GetCVar("MIP_ASGMarineA_Moving"));
+}
+
+Script 1929 (void) {
+    SetResultValue(GetCVar("MIP_ASGMarineA_Guarding"));
+}
+
+
+Script 1930 (void) {
+    SetResultValue(GetCVar("MIP_PCMarineA_Moving"));
+}
+
+Script 1931 (void) {
+    SetResultValue(GetCVar("MIP_PCMarineA_Guarding"));
+}
+
+
+
+
+//NEW MOVEMENTS
+//RIFLE
+Script 2000 (void) {
+    SetResultValue(GetCVar("MIP_RMarineNM_Guarding"));
+}
+
+Script 2001 (void) {
+    SetResultValue(GetCVar("MIP_RMarineNM_Moving"));
+}
+
+Script 2002 (void) {
+    SetResultValue(GetCVar("MIP_RMarineNM_Dodge"));
+}
+
+//MINIGUN
+Script 2020 (void) {
+    SetResultValue(GetCVar("MIP_MMarineNM_Guarding"));
+}
+
+Script 2021 (void) {
+    SetResultValue(GetCVar("MIP_MMarineNM_Moving"));
+}
+
+Script 2022 (void) {
+    SetResultValue(GetCVar("MIP_MMarineNM_Dodge"));
+}
+
+//SHOTGUN
+Script 2040 (void) {
+    SetResultValue(GetCVar("MIP_SGMarineNM_Guarding"));
+}
+
+Script 2041 (void) {
+    SetResultValue(GetCVar("MIP_SGMarineNM_Moving"));
+}
+
+Script 2042 (void) {
+    SetResultValue(GetCVar("MIP_SGMarineNM_Dodge"));
+}
+
+//PLASMAGUN
+Script 2060 (void) {
+    SetResultValue(GetCVar("MIP_PGMarineNM_Guarding"));
+}
+
+Script 2061 (void) {
+    SetResultValue(GetCVar("MIP_PGMarineNM_Moving"));
+}
+
+Script 2062 (void) {
+    SetResultValue(GetCVar("MIP_PGMarineNM_Dodge"));
+}
+
+//AUTOSHOTGUN
+Script 2080 (void) {
+    SetResultValue(GetCVar("MIP_ASGMarineNM_Guarding"));
+}
+
+Script 2081 (void) {
+    SetResultValue(GetCVar("MIP_ASGMarineNM_Moving"));
+}
+
+Script 2082 (void) {
+    SetResultValue(GetCVar("MIP_ASGMarineNM_Dodge"));
+}
+
+//PULSECANNON
+Script 2100 (void) {
+    SetResultValue(GetCVar("MIP_PCMarineNM_Guarding"));
+}
+
+Script 2101 (void) {
+    SetResultValue(GetCVar("MIP_PCMarineNM_Moving"));
+}
+
+Script 2102 (void) {
+    SetResultValue(GetCVar("MIP_PCMarineNM_Dodge"));
+}

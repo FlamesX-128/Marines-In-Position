@@ -1,55 +1,44 @@
-#library "ALERT"
+#library "MIPALERT"
 #include "zcommon.acs"
 
-Script 1922 (void) NET CLIENTSIDE {
-	if (GetCVar("cd_alertmarine") == 1) {
-	    ConsoleCommand("set cd_alertmarine 0");
-		//ConsoleCommand("archivecvar cd_alert_moving");
-		Log(s:"\cc<TEAM> \cdMarine\ca: \cjMarine [Guarding] disable dialogues ");
-		
-	} else if (GetCVar("cd_alertmarine") == 0) {
-	    ConsoleCommand("set cd_alertmarine 1");
-		//ConsoleCommand("archivecvar cd_alert_moving");
-		Log(s:"\cc<TEAM> \cdMarine\ca: \cjMarine [Guarding] activated dialogues ");
-	} else {
-		Log(s:"\cc<TEAM> \cdMarine\ca: \cjERROR SYSTEM");
-		ConsoleCommand("set cd_alertmarine 0");
-		//ConsoleCommand("archivecvar cd_alert_moving");
-	}	
-}
-
-Script 1923 (void) {
-    SetResultValue(GetCVar("cd_alertmarine"));
-}
+int AlertMsgTwo[7] = { 
+	"Enemy in sight!", 
+	"Enemy!", 
+	"Enemy, watch out!", 
+	"watch out!", 
+	"Enemy, shoot!", 
+	"Contact!", 
+	"Demon!" 
+};
 
 Script "RMarineCombat" (void) NET CLIENTSIDE {
-	Log(s:"\cc<TEAM> \cdMarine [Rifle]\ca: \cjEnemy in sight!");
+	Log(s:"\cc<TEAM> \cdMarine [Rifle]\ca: \cj", s:AlertMsgTwo[random(0, 6)]);
 	PlaySound(0, "DSTINK", CHAN_BODY, 1.0, FALSE, 0);
 	GiveInventory("AlertMarine", 1);
-	delay(35*10);
+	delay(35*GetCVar("MIP_RMarineA_MCooldown"));
 	TakeInventory("AlertMarine", 1);
 }
 
 Script "MMarineCombat" (void) NET CLIENTSIDE {
-	Log(s:"\cc<TEAM> \cdMarine [Minigun]\ca: \cjEnemy in sight!");
+	Log(s:"\cc<TEAM> \cdMarine [Minigun]\ca: \cj", s:AlertMsgTwo[random(0, 6)]);
 	PlaySound(0, "DSTINK", CHAN_BODY, 1.0, FALSE, 0);
 	GiveInventory("AlertMarine", 1);
-	delay(35*10);
+	delay(35*GetCVar("MIP_MMarineA_MCooldown"));
 	TakeInventory("AlertMarine", 1);
 }
 
 Script "SGMarineCombat" (void) NET CLIENTSIDE {
-	Log(s:"\cc<TEAM> \cdMarine [Shotgun]\ca: \cjEnemy in sight!");
+	Log(s:"\cc<TEAM> \cdMarine [Shotgun]\ca: \cj", s:AlertMsgTwo[random(0, 6)]);
 	PlaySound(0, "DSTINK", CHAN_BODY, 1.0, FALSE, 0);
 	GiveInventory("AlertMarine", 1);
-	delay(35*10);
+	delay(35*GetCVar("MIP_SGMarineA_MCooldown"));
 	TakeInventory("AlertMarine", 1);
 }
 
 Script "PGMarineCombat" (void) NET CLIENTSIDE {
-	Log(s:"\cc<TEAM> \cdMarine [PlasmaGun]\ca: \cjEnemy in sight!");
+	Log(s:"\cc<TEAM> \cdMarine [PlasmaGun]\ca: \cj", s:AlertMsgTwo[random(0, 6)]);
 	PlaySound(0, "DSTINK", CHAN_BODY, 1.0, FALSE, 0);
 	GiveInventory("AlertMarine", 1);
-	delay(35*10);
+	delay(35*GetCVar("MIP_PGMarineA_MCooldown"));
 	TakeInventory("AlertMarine", 1);
 }

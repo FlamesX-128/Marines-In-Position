@@ -1,2 +1,76 @@
-SERVER INT cd_alertmarine = 1;
-SERVER INT cd_alertmarine2 = 1;
+// Alert
+SERVER INT MIP_RMarineA_Guarding = 1;
+SERVER INT MIP_RMarineA_Moving = 1;
+SERVER INT MIP_RMarineA_GCooldown = 35;
+SERVER INT MIP_RMarineA_MCooldown = 10;
+
+
+SERVER INT MIP_MMarineA_Guarding = 1;
+SERVER INT MIP_MMarineA_Moving = 1;
+SERVER INT MIP_MMarineA_GCooldown = 35;
+SERVER INT MIP_MMarineA_MCooldown = 10;
+
+
+SERVER INT MIP_SGMarineA_Guarding = 1;
+SERVER INT MIP_SGMarineA_Moving = 1;
+SERVER INT MIP_SGMarineA_GCooldown = 35;
+SERVER INT MIP_SGMarineA_MCooldown = 10;
+
+
+SERVER INT MIP_PGMarineA_Guarding = 1;
+SERVER INT MIP_PGMarineA_Moving = 1;
+SERVER INT MIP_PGMarineA_GCooldown = 35;
+SERVER INT MIP_PGMarineA_MCooldown = 10;
+
+
+SERVER INT MIP_ASGMarineA_Guarding = 1;
+SERVER INT MIP_ASGMarineA_Moving = 1;
+SERVER INT MIP_ASGMarineA_GCooldown = 35;
+SERVER INT MIP_ASGMarineA_MCooldown = 10;
+
+
+SERVER INT MIP_PCMarineA_Guarding = 1;
+SERVER INT MIP_PCMarineA_Moving = 1;
+SERVER INT MIP_PCMarineA_GCooldown = 35;
+SERVER INT MIP_PCMarineA_MCooldown = 10;
+
+
+//New Movements
+//RIFLE
+SERVER INT MIP_RMarineNM_Guarding = 1;
+SERVER INT MIP_RMarineNM_Dodge = 1;
+
+SERVER INT MIP_RMarineNM_Moving = 1;
+
+//MINIGUN
+SERVER INT MIP_MMarineNM_Guarding = 1;
+SERVER INT MIP_MMarineNM_Dodge = 1;
+
+SERVER INT MIP_MMarineNM_Moving = 1;
+
+//SHOTGUN
+SERVER INT MIP_SGMarineNM_Guarding = 1;
+SERVER INT MIP_SGMarineNM_Dodge = 1;
+
+SERVER INT MIP_SGMarineNM_Moving = 1;
+
+//PLASMAGUN
+SERVER INT MIP_PGMarineNM_Guarding = 1;
+SERVER INT MIP_PGMarineNM_Dodge = 1;
+
+SERVER INT MIP_PGMarineNM_Moving = 1;
+
+//AUTOSHOTGUN
+SERVER INT MIP_ASGMarineNM_Guarding = 1;
+SERVER INT MIP_ASGMarineNM_Dodge = 1;
+
+SERVER INT MIP_ASGMarineNM_Moving = 1;
+
+//PULSECANNON
+SERVER INT MIP_PCMarineNM_Guarding = 1;
+SERVER INT MIP_PCMarineNM_Dodge = 1;
+
+SERVER INT MIP_PCMarineNM_Moving = 1;
+
+
+

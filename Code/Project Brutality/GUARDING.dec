@@ -6,12 +6,15 @@ States
         //PLAY E 1
 		TNT1 A 0 A_ChangeFlag("FRIENDLY", 1)
 		TNT1 A 0 A_SpawnItem("KillMeSmall")
-		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1923) == 0, "MissileContinue")
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1921) == 0, "MissileContinue")
 		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "MissileContinue")
 		TNT1 A 0 ACS_NamedExecuteAlways("RMarineGCombat")
 	MissileContinue:
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckDodge")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckDodge")
+	Missile2:
 		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
 		//TNT1 A 0 A_ChangeFlag("SOLID", 1)
 		
@@ -45,6 +48,17 @@ States
 		TNT1 A 0 A_SpawnItem ("RifleCaseSpawn", 0, 30,0)
 		TNT1 A 0 A_CPosREfire
 		Goto See
+
+	CheckDodge:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2000) == 0, "Missile2") //New Movements
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2002) == 0, "Missile2") //Dodge moves
+		TNT1 A 0 A_Jump(75, "2")
+		Goto Missile2
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfCloser(200, "Retreat")
+		TNT1 A 0 A_Jump(256, "MissileRight", "MissileLeft")
+		Goto MissileRight	
 	}
 }
 
@@ -62,9 +76,22 @@ States
 	MissileContinue:
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckDodge")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckDodge")
 		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
 		TNT1 A 0 A_ChangeFlag("SOLID", 1)
-		Goto Missile2	
+		Goto Missile2
+	
+	CheckDodge:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2020) == 0, "Missile2") //New Movements
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2022) == 0, "Missile2") //Dodge moves
+		TNT1 A 0 A_Jump(75, "2")
+		Goto Missile2
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfCloser(200, "Retreat")
+		TNT1 A 0 A_Jump(256, "StrafeLeft", "StrafeRight")
+		Goto StrafeRight
 	}
 }
 
@@ -75,15 +102,28 @@ States
 	Missile:
 		TNT1 A 0 A_ChangeFlag("FRIENDLY", 1)
 		TNT1 A 0 A_SpawnItem("KillMeSmall")
-		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1923) == 0, "MissileContinue")
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1925) == 0, "MissileContinue")
 		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "MissileContinue")
 		TNT1 A 0 ACS_NamedExecuteAlways("SGMarineGCombat")
 	MissileContinue:
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckDodge")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckDodge")
 		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
 		TNT1 A 0 A_ChangeFlag("SOLID", 1)
 		Goto Missile2
+	
+	CheckDodge:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2040) == 0, "Missile2") //New Movements
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2042) == 0, "Missile2") //Dodge moves
+		TNT1 A 0 A_Jump(75, "2")
+		Goto Missile2
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfCloser(200, "Retreat")
+		TNT1 A 0 A_Jump(256, "StrafeLeft", "StrafeRight")
+		Goto StrafeRight
 	}
 }
 
@@ -94,15 +134,28 @@ States
 	Missile:
 		TNT1 A 0 A_ChangeFlag("FRIENDLY", 1)
 		TNT1 A 0 A_SpawnItem("KillMeSmall")
-		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1923) == 0, "MissileContinue")
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1927) == 0, "MissileContinue")
 		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "MissileContinue")
 		TNT1 A 0 ACS_NamedExecuteAlways("PGMarineGCombat")
 	MissileContinue:
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckDodge")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckDodge")
 		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
 		TNT1 A 0 A_ChangeFlag("SOLID", 1)
 		Goto Missile2
+	
+	CheckDodge:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2060) == 0, "Missile2") //New Movements
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2062) == 0, "Missile2") //Dodge moves
+		TNT1 A 0 A_Jump(75, "2")
+		Goto Missile2
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfCloser(200, "Retreat")
+		TNT1 A 0 A_Jump(256, "StrafeLeft", "StrafeRight")
+		Goto StrafeRight
 	}
 }
 
@@ -113,15 +166,28 @@ States
 	Missile:
 		TNT1 A 0 A_ChangeFlag("FRIENDLY", 1)
 		TNT1 A 0 A_SpawnItem("KillMeSmall")
-		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1923) == 0, "MissileContinue")
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1929) == 0, "MissileContinue")
 		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "MissileContinue")
 		TNT1 A 0 ACS_NamedExecuteAlways("ASGMarineGCombat")
 	MissileContinue:
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckDodge")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckDodge")
 		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
 		TNT1 A 0 A_ChangeFlag("SOLID", 1)
 		Goto Missile2
+	
+	CheckDodge:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2080) == 0, "Missile2") //New Movements
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2082) == 0, "Missile2") //Dodge moves
+		TNT1 A 0 A_Jump(75, "2")
+		Goto Missile2
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfCloser(200, "Retreat")
+		TNT1 A 0 A_Jump(256, "StrafeLeft", "StrafeRight")
+		Goto StrafeRight
 	}
 }
 
@@ -132,14 +198,27 @@ States
 	Missile:
 		TNT1 A 0 A_ChangeFlag("FRIENDLY", 1)
 		TNT1 A 0 A_SpawnItem("KillMeSmall")
-		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1923) == 0, "MissileContinue")
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(1931) == 0, "MissileContinue")
 		TNT1 A 0 A_JumpIfInventory("AlertMarine", 1, "MissileContinue")
 		TNT1 A 0 ACS_NamedExecuteAlways("PCMarineGCombat")
 	MissileContinue:
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsACyberdemon", 1, "CheckRetreat")
 		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMastermind", 1, "CheckRetreat")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsABaronOfHell", 1, "CheckDodge")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMancubus", 1, "CheckDodge")
 		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
 		TNT1 A 0 A_ChangeFlag("SOLID", 1)
 		Goto Missile2
+	
+	CheckDodge:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2100) == 0, "Missile2") //New Movements
+		TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(2102) == 0, "Missile2") //Dodge moves
+		TNT1 A 0 A_Jump(75, "2")
+		Goto Missile2
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfCloser(200, "Retreat")
+		TNT1 A 0 A_Jump(256, "StrafeLeft", "StrafeRight")
+		Goto StrafeRight
 	}
 }

@@ -19,6 +19,8 @@ States
 	{
 	Spawn:
 		POSS A 1
+	Stand:
+		POSS A 1
 		Loop
 	
 	Death:

@@ -1,0 +1,400 @@
+OptionMenu "OptionsMenu"
+{
+	Title "OPTIONS"
+	Submenu "Project Brutality Settings",		"BDSettings"
+	StaticText " "
+	Submenu "Marines In Position Settings",	"MIPSettings"
+	StaticText " "
+	Submenu "Customize Controls",		"CustomizeControls"
+	Submenu "Mouse options",			"MouseOptions"
+	Submenu "Joystick options",			"JoystickOptions"
+	StaticText " "
+	Submenu "Player Setup",				"PlayerMenu"
+	Submenu "Gameplay Options",			"GameplayOptions"
+	Submenu "Compatibility Options",	"CompatibilityOptions"
+	Submenu "Automap Options",			"AutomapOptions"
+	Submenu "HUD Options",				"HUDOptions"
+	Submenu "Miscellaneous Options",	"MiscOptions"
+	Submenu "Sound Options",			"SoundOptions"
+	Submenu "Display Options",			"VideoOptions"
+	Submenu "Set video mode",			"VideoModeMenu"
+	StaticText " "
+	SafeCommand "Reset to defaults",	"reset2defaults"
+	SafeCommand	"Reset to last saved",	"reset2saved"
+	Command "Go to console",			"menuconsole"
+}
+
+OptionMenu "MIPSettings"
+{
+  Title "--Marines In Position Settings--"
+	StaticText " "
+
+  Submenu "Marine Alerts",		"MIP_Alerts"
+	StaticText " "
+	
+  Submenu "New movements",		"MIP_NM"
+	StaticText " "
+}
+
+OptionMenu "MIP_Alerts"
+{
+  Title "-----Marine Alerts Settings-----"
+  Submenu "Assault Marine [Settings]", "MIP_A_AMS"
+  StaticText " "
+  
+  Submenu "Marine Shotgun [Settings]", "MIP_A_MSS"
+  StaticText " "
+  
+  Submenu "Marine Plasma [Settings]", "MIP_A_MPS"
+  StaticText " "
+}
+
+OptionMenu "MIP_A_AMS" //Marines in position alertassault marine settings
+{
+  Title "----Assault Marine Settings----"
+  StaticText "Marine Rifle [Settings]"
+  Option "Moving Alert    >> ", "MIP_RMarineA_Moving", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_RMarineA_MCooldown", 1, 240, 1
+	StaticText " "
+
+  Option "Guarding Alert  >> ", "MIP_RMarineA_Guarding", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_RMarineA_GCooldown", 1, 240, 1
+	StaticText " "
+	StaticText " "
+
+
+
+  StaticText "Marine Minigun [Settings]"
+  Option "Moving Alert    >> ", "MIP_MMarineA_Moving", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_MMarineA_MCooldown", 1, 240, 1
+	StaticText " "
+	
+  Option "Guarding Alert  >> ", "MIP_MMarineA_Guarding", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_MMarineA_GCooldown", 1, 240, 1
+	StaticText " "
+	StaticText " "
+}
+
+OptionMenu "MIP_A_MSS" //Marines in position alert marine shotgun settings
+{
+  Title "----Marine Shotgun Settings----"
+  StaticText "Marine Shotgun [Settings]"
+  Option "Moving Alert    >> ", "MIP_SGMarineA_Moving", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_SGMarineA_MCooldown", 1, 240, 1
+	StaticText " "
+
+  Option "Guarding Alert  >> ", "MIP_SGMarineA_Guarding", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_SGMarineA_GCooldown", 1, 240, 1
+	StaticText " "
+	StaticText " "
+
+
+
+  StaticText "Marine AutoShotgun [Settings]"
+  Option "Moving Alert    >> ", "MIP_ASGMarineA_Moving", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_ASGMarineA_MCooldown", 1, 240, 1
+	StaticText " "
+
+  Option "Guarding Alert  >> ", "MIP_ASGMarineA_Guarding", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_ASGMarineA_GCooldown", 1, 240, 1
+	StaticText " "
+	StaticText " "
+}
+
+OptionMenu "MIP_A_MPS" //Marines in position alert marine plasma settings
+{
+  Title "-----Marine Plasma Settings-----"
+  StaticText "Marine PlasmaGun [Settings]"
+  Option "Moving Alert    >> ", "MIP_PGMarineA_Moving", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_PGMarineA_MCooldown", 1, 240, 1
+	StaticText " "
+
+  Option "Guarding Alert  >> ", "MIP_PGMarineA_Guarding", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_PGMarineA_GCooldown", 1, 240, 1
+	StaticText " "
+	StaticText " "
+
+
+
+  StaticText "Marine PulseCannon [Settings]"
+  Option "Moving Alert    >> ", "MIP_PCMarineA_Moving", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_PCMarineA_MCooldown", 1, 240, 1
+	StaticText " "
+
+  Option "Guarding Alert  >> ", "MIP_PCMarineA_Guarding", "TrueOrFalse"
+  Slider "Alert interval  >> ", "MIP_PCMarineA_GCooldown", 1, 240, 1
+	StaticText " "
+	StaticText " "
+}
+
+
+OptionMenu "MIP_NM" // Marines in position new movements
+{
+  Title "---New movements settings---"
+  Submenu "Assault Marine [Settings]", "MIP_NM_AM"
+  StaticText " "
+  
+  Submenu "Marine Shotgun [Settings]", "MIP_NM_MS"
+  StaticText " "
+  
+  Submenu "Marine Plasma [Settings]", "MIP_NM_MP"
+  StaticText " "
+}
+
+OptionMenu "MIP_NM_AM" 
+{
+  Title "--Assault Marine Settings--"
+  StaticText ">> Marine Rifle <<"
+  StaticText "> Guarding <"
+  Option "Movements", "MIP_RMarineNM_Guarding", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MR_SONE"
+  
+  StaticText " "
+  StaticText " "
+  
+  StaticText "> Moving <"
+  Option "Movements", "MIP_RMarineNM_Moving", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MR_STWO"
+  
+  StaticText " "
+  StaticText " "
+  
+  StaticText ">> Marine Minigun <<"
+  StaticText "> Guarding <"
+  Option "Movements", "MIP_MMarineNM_Guarding", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MM_SONE"
+  
+  StaticText " "
+  StaticText " "
+  
+  StaticText "> Moving <"
+  Option "Movements", "MIP_MMarineNM_Moving", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MM_STWO"
+}
+
+//RIFLE
+OptionMenu "MIP_NM_MR_SONE"
+{
+  Title "---Marine Rifle Settings---"
+  StaticText "> Guarding <"
+  Option "Dodge", "MIP_RMarineNM_Dodge", "TrueOrFalse"
+}
+
+OptionMenu "MIP_NM_MR_STWO"
+{
+  Title "---Marine Rifle Settings---"
+  StaticText "> Moving <"
+}
+
+//MINIGUN
+OptionMenu "MIP_NM_MM_SONE"
+{
+  Title "---Marine Minigun Settings---"
+  StaticText "> Guarding <"
+  Option "Dodge", "MIP_MMarineNM_Dodge", "TrueOrFalse"
+}
+
+OptionMenu "MIP_NM_MM_STWO"
+{
+  Title "---Marine Minigun Settings---"
+  StaticText "> Moving <"
+}
+
+
+
+
+
+OptionMenu "MIP_NM_MS" 
+{
+  Title "--Marine Shotgun Settings--"
+  StaticText ">> Marine Shotgun <<"
+  StaticText "> Guarding <"
+  Option "Movements", "MIP_SGMarineNM_Guarding", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MSG_SONE"
+  
+  StaticText " "
+  StaticText " "
+  
+  StaticText "> Moving <"
+  Option "Movements", "MIP_SGMarineNM_Moving", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MSG_STWO"
+  
+  StaticText " "
+  StaticText " "
+  
+  StaticText ">> Marine AutoShotgun <<"
+  StaticText "> Guarding <"
+  Option "Movements", "MIP_ASGMarineNM_Guarding", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MASG_SONE"
+  
+  StaticText " "
+  StaticText " "
+  
+  StaticText "> Moving <"
+  Option "Movements", "MIP_ASGMarineNM_Moving", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MASG_STWO"
+}
+
+//SHOTGUN
+OptionMenu "MIP_NM_MSG_SONE"
+{
+  Title "---Marine Shotgun Settings---"
+  StaticText "> Guarding <"
+  Option "Dodge", "MIP_SGMarineNM_Dodge", "TrueOrFalse"
+}
+
+OptionMenu "MIP_NM_MSG_STWO"
+{
+  Title "---Marine Shotgun Settings---"
+  StaticText "> Moving <"
+}
+
+//AUTOSHOTGUN
+OptionMenu "MIP_NM_MASG_SONE"
+{
+  Title "-Marine AutoShotgun Settings-"
+  StaticText "> Guarding <"
+  Option "Dodge", "MIP_ASGMarineNM_Dodge", "TrueOrFalse"
+}
+
+OptionMenu "MIP_NM_MASG_STWO"
+{
+  Title "-Marine AutoShotgun Settings-"
+  StaticText "> MOVING <"
+}
+
+
+
+
+OptionMenu "MIP_NM_MP" 
+{
+  Title "--Marine Plasma Settings--"
+  StaticText ">> Marine PlasmaGun <<"
+  StaticText "> Guarding <"
+  Option "Movements", "MIP_PGMarineNM_Guarding", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MPG_SONE"
+  
+  StaticText " "
+  StaticText " "
+  
+  StaticText "> Moving <"
+  Option "Movements", "MIP_PGMarineNM_Moving", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MPG_STWO"
+  
+  StaticText " "
+  StaticText " "
+  
+  StaticText ">> Marine PulseCannon <<"
+  StaticText "> Guarding <"
+  Option "Movements", "MIP_PCMarineNM_Guarding", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MPC_SONE"
+  
+  StaticText " "
+  StaticText " "
+  
+  StaticText "> Moving <"
+  Option "Movements", "MIP_PCMarineNM_Moving", "TrueOrFalse"
+  Submenu "Movements settings", "MIP_NM_MPC_STWO"
+}
+
+//PLASMAGUN
+OptionMenu "MIP_NM_MPG_SONE"
+{
+  Title "---Marine PlasmaGun Settings---"
+  StaticText "> Guarding <"
+  Option "Dodge", "MIP_PGMarineNM_Dodge", "TrueOrFalse"
+}
+
+OptionMenu "MIP_NM_MPG_STWO"
+{
+  Title "---Marine PlasmaGun Settings---"
+  StaticText "> Moving <"
+}
+
+//PULSECANNON
+OptionMenu "MIP_NM_MPC_SONE"
+{
+  Title "-Marine PulseCannon Settings-"
+  StaticText "> Guarding <"
+  Option "Dodge", "MIP_PCMarineNM_Dodge", "TrueOrFalse"
+}
+
+OptionMenu "MIP_NM_MPC_STWO"
+{
+  Title "-Marine PulseCannon Settings-"
+  StaticText "> MOVING <"
+}
+
+OptionValue "TrueOrFalse"
+{
+	0, "False"
+	1, "True"
+}
+
+ListMenu "MainMenu"
+{
+	IfGame(Doom, Chex)
+	{
+		StaticPatch 94, 2, "M_DOOM"
+		Position 97, 72
+		IfOption(ReadThis)
+		{
+			Position 97, 64
+		}
+	}
+	IfGame(Strife)
+	{
+		StaticPatch 84, 2, "M_STRIFE"
+		Position 97, 45
+	}
+	IfGame(Heretic)
+	{
+		StaticPatch 88, 0, "M_HTIC"
+		StaticPatch 40, 10, "M_SKL01"
+		StaticPatch 232, 10, "M_SKL00"
+		Position 110, 56
+	}
+	IfGame(Hexen)
+	{
+		StaticPatch 88, 0, "M_HTIC"
+		StaticPatch 37, 80, "FBULB0"
+		StaticPatch 278, 80, "FBULA0"
+		Position 110, 56
+	}
+	
+	IfGame(Doom, Strife, Chex)
+	{
+		TextItem "New Game", "n", "PlayerclassMenu"
+		ifOption(SwapMenu)
+		{
+			TextItem "Load Game", "l", "LoadGameMenu"
+			TextItem "Save Game", "s", "SaveGameMenu"
+			TextItem "Options", "o", "OptionsMenu"
+			TextItem "BD Options", "b", "BDSettings"
+		}
+		else
+		{
+			TextItem "Options", "o", "OptionsMenu"
+			TextItem "Project Brutality", "b", "BDSettings"
+			TextItem "Marines In Position", "m", "MIPSettings"
+			TextItem "Load Game", "l", "LoadGameMenu"
+			TextItem "Save Game", "s", "SaveGameMenu"
+		}
+		ifOption(ReadThis)
+		{
+			TextItem "Read This!","r", "ReadThisMenu"
+		}
+		TextItem "Quit Game", "q", "QuitMenu"
+	}
+	
+	IfGame(Heretic, Hexen)
+	{
+		TextItem "$MNU_NEWGAME", "n", "PlayerclassMenu"
+		TextItem "$MNU_OPTIONS", "o", "OptionsMenu"
+		TextItem "Project Brutality Settings", "b", "BDSettings"
+		TextItem "Marines In Position", "m", "MIPSettings"
+		TextItem "$MNU_GAMEFILES", "g", "GameFilesMenu"
+		TextItem "$MNU_INFO", "i", "ReadThisMenu"
+		TextItem "$MNU_QUITGAME", "q", "QuitMenu"
+	}
+}
